@@ -1,5 +1,5 @@
-#!/bin/python2
 from pyautogui import typewrite
+
 from time import sleep
 
 def start1():
@@ -55,13 +55,13 @@ def main():
     print "1. Spam \n2. Unique Spam \n3. Countdown \n4. Klat mas \n5. Weeb"
     input1 = input("Selection: ")
     if input1 == 1:
-        start()
+        start1()
     elif input1 == 2:
-        start1()                  
+        start2()                  
     elif input1 == 3:
-        start2()
+        start3)
     elif input1 == 4:
-        start3()
+        start4()
     elif input1 == 5:
         start5()
 
