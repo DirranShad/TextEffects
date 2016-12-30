@@ -48,11 +48,18 @@ def start5():
     sleep(3)
     typewrite(s)
     typewrite(['enter'])
+
+def start6():
+    r = raw_input("Enter sentence: ")
+    sleep(3)
+    for x in list(r):
+        typewrite(x)
+        typewrite(['enter'])
         
         
  
 def main():
-    print "1. Spam \n2. Unique Spam \n3. Countdown \n4. Klat mas \n5. Weeb"
+    print "1. Spam \n2. Unique Spam \n3. Countdown \n4. Klat mas \n5. Weeb \n6. Vertical Text"
     input1 = input("Selection: ")
     if input1 == 1:
         start1()
@@ -64,6 +71,8 @@ def main():
         start4()
     elif input1 == 5:
         start5()
+    elif input1 == 6:
+        start6()
 
     
     main()
