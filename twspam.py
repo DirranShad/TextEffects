@@ -1,5 +1,5 @@
+#!/bin/python2
 from pyautogui import typewrite
-
 from time import sleep
 
 def start1():
