@@ -59,7 +59,7 @@ def main():
     elif input1 == 2:
         start2()                  
     elif input1 == 3:
-        start3)
+        start3()
     elif input1 == 4:
         start4()
     elif input1 == 5:
