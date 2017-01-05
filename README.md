@@ -11,5 +11,19 @@ TWSpam is a bad name. Spamming is not the only thing this program does.<br><br>
   6. Vertical Text
   
 Once you've chosen a mode, select a textfield, and it will start its magic.
+
+###Run the program
+
+Install Electron (Needed)
+```bash
+npm install electron
+```
+
+To run the program:
+```bash
+npm start
+```
+  <br>
+  
   
 ######This thing is kinda dodgy, twspam is not accountable for any loss that may occur from using this program.
