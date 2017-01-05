@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body {
+    font-family: 'Open Sans', Sans Serif;
+    text-align: center;
+    background-color: #f6f6f6;
+}
+
+h1 {
+    color: #343434;
+}
+
+a {
+    text-decoration: none;
+    color: #1e2640;
+    border: 1px solid #242d4d;
+    font-weight: 100;
+    margin-bottom: 30px;
+}

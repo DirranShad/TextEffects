@@ -1,0 +1,26 @@
+{
+  "name": "twspam",
+  "version": "1.0.0",
+  "description": "A GUI for TWSpam",
+  "main": "index.js",
+  "dependencies": {
+    "electron-prebuilt": "^1.4.13"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dirranshad/twspam.git"
+  },
+  "keywords": [
+    "twspam"
+  ],
+  "author": "DirranShad and Cyber-Shadow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dirranshad/twspam/issues"
+  },
+  "homepage": "https://github.com/dirranshad/twspam#readme"
+}
