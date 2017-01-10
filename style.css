@@ -1,18 +1,43 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-body {
-    font-family: 'Open Sans', Sans Serif;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
+body, button {
+    font-family: "Open Sans", Sans Serif;
     text-align: center;
-    background-color: #f6f6f6;
 }
 
-h1 {
-    color: #343434;
+body {
+    background-color: #fefefe;
 }
 
-a {
-    text-decoration: none;
-    color: #1e2640;
-    border: 1px solid #242d4d;
-    font-weight: 100;
-    margin-bottom: 30px;
+h1, h3 {
+    color: #242d4d;
+    font-weight: 600;
+    margin: 0px 0px 15px;
+}
+
+button {
+    color: #242d4d;
+    border: 3px solid #242d4d;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    font-weight: 400;
+    font-family: "Open Sans", Sans Serif;
+    font-size: 15px;
+    background-color: #fefefe;
+    -webkit-transition-duration: 0.1s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+button:hover {
+  padding: 16px 16px;
+  margin: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fefefe;
+  border-radius: 25px;
+  background-color: #3b456a;
+}
+
+#message {
+  display: none;
 }

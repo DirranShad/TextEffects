@@ -13,8 +13,9 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 500, height: 600, icon: 'favicontwspam.png'})
-
+  mainWindow = new BrowserWindow({width: 1200, height: 600, icon: 'favicontwspam.png'})
+  mainWindow.setMenu(null);
+  //mainWindow.webContents.openDevTools()
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
@@ -54,8 +55,5 @@ app.on('activate', function () {
   }
 })
 
-function Spam() {
-  console.log('something')
-}
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.

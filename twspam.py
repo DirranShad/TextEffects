@@ -56,7 +56,7 @@ def start6():
         typewrite(x)
         typewrite(['enter'])
 
-def main():
+#def main():
     print "1. Spam \n2. Unique Spam \n3. Countdown \n4. Klat mas \n5. Weeb \n6. Vertical Text"
     input1 = input("Selection: ")
     if input1 == 1:
@@ -72,5 +72,5 @@ def main():
     elif input1 == 6:
         start6()
 
-    main()
-main()
+#    main()
+#main()
