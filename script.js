@@ -1,5 +1,9 @@
 var filler = "This is the Filller!"
+var mode = ['start1()', 'start2()', 'start3()', 'start4()', 'start5()', 'start6()']
+var modeno
+
 function hide() {
+  $('button').prop("disabled",true);
   $('#main').fadeOut(300);
 }
 
@@ -15,6 +19,7 @@ function showOptions(title, desc, action, inputno) {
   $('#inputs').after('<button id="backBtn" onclick="menu()">Back</button>');
   $('#inputs').after('<button id="submitBtn" onclick="submit()">Submit</button>');
   $('#message').fadeIn(300);
+  $('button').prop("disabled",false);
   console.log(title + '\n' + desc);
 }
 
@@ -26,14 +31,21 @@ function menu(){
 }, 300);
 }
 
+function submit(){
+  $('#message').fadeOut(300);
+  //TODO 
+}
+
 function spam() {
+  var mode = 0;
   hide();
   setTimeout(function(){
     showOptions('Spam','Spams your chat with one word at a time.', ['Your Message', 'No. of Times to Print'], 2);
   }, 300);
-};
+}
 
 function uniqueSpam() {
+  var mode = 1;
   hide();
   setTimeout(function(){
     showOptions('Unique Spam', 'Spams your chat with one word and number at a time.', ['Your Message', 'No. of Times to Print'], 2);
@@ -41,6 +53,7 @@ function uniqueSpam() {
 }
 
 function countdown() {
+  var mode = 2;
   hide();
   setTimeout(function(){
     showOptions('Countdown', 'Spams your chat with a countdown.', ['Number to Countdown from'], 1);
@@ -48,6 +61,7 @@ function countdown() {
 }
 
 function samTalk() {
+  var mode = 3;
   hide();
   setTimeout(function(){
     showOptions('Klat Mas (Sam Talk)', 'Turns your text backwards.', ['Phrase to Translate'], 1);
@@ -55,6 +69,7 @@ function samTalk() {
 }
 
 function weebTalk() {
+  var mode = 4;
   hide();
   setTimeout(function(){
     showOptions('Unique Spam', 'Makes your text into weeb talk.', ['Phrase to Translate'], 1);
@@ -62,6 +77,7 @@ function weebTalk() {
 }
 
 function verticalText() {
+  var mode = 5;
   hide();
   setTimeout(function(){
     showOptions('Vertical Text', 'Turns your text vertically in a chat.', ['Phrase to Translate'], 1);
