@@ -1,5 +1,4 @@
 from pyautogui import typewrite
-
 from time import sleep
 
 def start1():

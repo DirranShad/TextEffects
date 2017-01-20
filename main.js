@@ -13,9 +13,9 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 1200, height: 600, icon: 'favicontwspam.png'})
+  mainWindow = new BrowserWindow({width: 1200, height: 600, resizable: false, icon: 'favicontwspam.png'})
   mainWindow.setMenu(null);
-  //mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),

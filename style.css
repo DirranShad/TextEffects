@@ -41,3 +41,49 @@ button:hover {
 #message {
   display: none;
 }
+
+#subtitle {
+  margin-bottom: 32px;
+}
+
+/* FOLLOWING CSS FROM CODEPEN.IO USER scotch.io *FORKED AND ADAPTED* */
+.group 			  {
+  position:relative;
+  margin: 0px auto 32px;
+  width: 300px;
+}
+input 				{
+  font-size: 18px;
+  color: #242d4d;
+  padding: 12px 10px 2px 2px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:2px solid #242d4d;
+}
+input:focus 		{ outline:none; }
+
+input [type="text"] {
+  font-family: "Open Sans", Sans Serif;
+}
+
+/* LABEL ======================================= */
+label 				 {
+  color:#3b456a;
+  font-size:18px;
+  font-weight:600;
+  position:absolute;
+  pointer-events:none;
+  left: 2px;
+  top: 8px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-14px;
+  font-size:14px;
+  color: #242d4d;
+}
