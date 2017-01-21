@@ -1,5 +1,6 @@
 from pyautogui import typewrite
 from time import sleep
+import sys, json
 
 def start1():
     loopstr = raw_input("What would you like to type? :")
@@ -30,7 +31,7 @@ def start3():
 def start4():
     while True:
         loopstr = raw_input("What would you like to reverse? :")
-        sleep(3)
+        sleep(5)
         typewrite(loopstr[::-1])
         typewrite(['enter'])
 
@@ -44,18 +45,18 @@ def start5():
         endlist.append(y)
     endlist.append('desu~')
     s = ' '.join(endlist)
-    sleep(3)
+    sleep(5)
     typewrite(s)
     typewrite(['enter'])
 
 def start6():
     r = raw_input("Enter sentence: ")
-    sleep(3)
+    sleep(5)
     for x in list(r):
         typewrite(x)
         typewrite(['enter'])
 
-#def main():
+def main1():
     print "1. Spam \n2. Unique Spam \n3. Countdown \n4. Klat mas \n5. Weeb \n6. Vertical Text"
     input1 = input("Selection: ")
     if input1 == 1:
@@ -71,5 +72,13 @@ def start6():
     elif input1 == 6:
         start6()
 
-#    main()
-#main()
+def read_in():
+    lines = sys.stdin.readlines()
+    return json.loads(lines[0])
+
+def main():
+    lines = read_in()
+    print lines
+
+if __name__ == '__main__':
+    main()

@@ -8,7 +8,7 @@ body {
     background-color: #fefefe;
 }
 
-h1, h3 {
+h1, h3, h5 {
     color: #242d4d;
     font-weight: 600;
     margin: 0px 0px 15px;
@@ -46,28 +46,28 @@ button:hover {
   margin-bottom: 32px;
 }
 
-/* FOLLOWING CSS FROM CODEPEN.IO USER scotch.io *FORKED AND ADAPTED* */
 .group 			  {
   position:relative;
   margin: 0px auto 32px;
   width: 300px;
 }
+
 input 				{
   font-size: 18px;
   color: #242d4d;
-  padding: 12px 10px 2px 2px;
+  padding: 12px 2px 2px 2px;
   display:block;
   width:300px;
   border:none;
   border-bottom:2px solid #242d4d;
 }
+
 input:focus 		{ outline:none; }
 
 input [type="text"] {
   font-family: "Open Sans", Sans Serif;
 }
 
-/* LABEL ======================================= */
 label 				 {
   color:#3b456a;
   font-size:18px;
@@ -81,7 +81,6 @@ label 				 {
   -webkit-transition:0.2s ease all;
 }
 
-/* active state */
 input:focus ~ label, input:valid ~ label 		{
   top:-14px;
   font-size:14px;
