@@ -1,8 +1,13 @@
-var mode = ['start1()', 'start2()', 'start3()', 'start4()', 'start5()', 'start6()'];
 var modeno;
 var PythonShell = require('python-shell');
 var script = 'twspam.py';
-var pyshell = new PythonShell(script);
+var cancelpython = 0
+window.cancelpython = cancelpython;
+
+$('#works').click(function() {
+  console.log('Something');
+  $('#main').slideUp();
+});
 
 function hide() {
   $('button').prop("disabled",true);
@@ -17,8 +22,7 @@ function showOptions(title, desc, action, inputno) {
   for (x = 0; x < inputno; x++) {
     $('#inputs').append('<div class="group">');
     $(".group").eq(x).append('<input type="text" id="input' + x + '" required><label>' + action[x] + '</label></div>');
-  }
-  $('#inputs').after('<button id="backBtn" onclick="menu()" style="left:50%;position:absolute;">Back</button>');
+  } $('#inputs').after('<button id="backBtn" onclick="menu()" style="left:50%;position:absolute;">Back</button>');
   $('#inputs').after('<button id="submitBtn" onclick="submit()" style="right:50%;position:absolute;">Submit</button>');
   $('#message').fadeIn(300);
   $('button').prop("disabled",false);
@@ -30,47 +34,102 @@ function menu(){
   window.setTimeout(function() {
     $('#message').empty();
     $('#main').fadeIn(300);
-}, 300);
+  }, 300);
 }
 
 function submit() {
+  $('button').prop("disabled",true);
+  cancelpython = 0
   var input0 = $('#input0').val();
   var input1 = $('#input1').val();
   if (input0 == "" || input1 == "") {
-    if ( $('#inputcheck').length ) {
-      ;
+    if ( $('.inputcheck').length >= 1 ) {
+      $('.inputcheck').fadeOut(200)
+      $('.inputcheck').fadeIn(200);
+    } else {
+      $('#backBtn').after('<h5 class="inputcheck" style="display:none;margin-top:-20px;">Please input something into all textboxes</h5>')
+      $('.inputcheck').fadeIn(300)
     }
-    $('#backBtn').after('<h5 id="inputcheck" style="display:none;margin-top:-20px;">Please input something into all textboxes</h5>')
-    $('#inputcheck').fadeIn(500);
-  } //else if ( $('h5').length() == 1) {
-    //;
-  /*}*/ else {
-    $('#message').fadeOut(500);
-    window.input0 = input0;
-    window.input1 = input1;
-    window.setTimeout(function() {
-      python();
-    }, 5000);
-   }
+  } else {
+      $('#message').fadeOut(300);
+      window.input0 = input0;
+      window.input1 = input1;
+      window.pythonset = pythonset;
+      window.setTimeout(function() {
+        modeScreen()
+      }, 300)
+      var pythonset = window.setTimeout(function() {
+        python();
+      }, 5300);
+  }
+}
+
+function end() {
+  $('button').prop("disabled",false);
+  $('#modeScreen').fadeOut(500);
+  window.setTimeout(function() {
+    $('#message').empty();
+    $('#modeScreen').empty();
+    $('#main').fadeIn(500);
+  }, 500);
+}
+
+
+function modeScreen() {
+  $('#modeScreen').append('<h1 id="modeTitle">Typing into selected textfield in:</h1>');
+  $('#modeTitle').after('<span id="timer">5</span>')
+  $('#timer').after('<br><button style="margin:16px;" id="cancelBtn" onclick="cancel()">Cancel</button>');
+  $('#modeScreen').fadeIn(500);
+  var count = 5;
+  var counter = window.setInterval(timer, 1000); //1000 will run it every 1 second
+  window.counter = counter;
+  function timer() {
+    count = count - 1;
+    if (count <= 0)
+    {
+       clearInterval(counter);
+       $("#timer").html('Inputting..');
+       return;
+    }
+    $("#timer").html(count);
+  }
+}
+
+function cancel() {
+  $('button').prop("disabled",false);
+  cancelpython = 1
+  window.clearTimeout(pythonset);
+  window.clearInterval(counter);
+  $('#modeScreen').fadeOut(500);
+  window.setTimeout(function() {
+    $('#modeScreen').empty();
+    $('#message').fadeIn(500);
+  }, 500);
 }
 
 function python() {
-  console.log(input0 + input1 + modeno)
-  pyshell.send(JSON.stringify([input0,input1,modeno]));
-  pyshell.end(function (err) {
-      if (err){
-          throw err;
-      };
-      console.log('Python Script Completed');
-  });
+  if (cancelpython == 0) {
+    var pyshell = new PythonShell(script);
+    //window.pyshell = pyshell;
+    pyshell.send(JSON.stringify([input0,input1,modeno]));
+    pyshell.end(function (err) {
+        if (err) {
+            throw err;
+        };
+        console.log('Python Script Completed');
+        end()
+    });
+    pyshell.on('message', function (message) {
+        console.log(message);
+    });
+  }
 }
 
-pyshell.on('message', function (message) {
-    console.log(message);
-});
+
 
 function spam() {
   var modeno = 0;
+  window.modeno = modeno;
   hide();
   setTimeout(function(){
     showOptions('Spam','Spams your chat with one word at a time.', ['Your Message', 'No. of Times to Print'], 2);
@@ -89,6 +148,7 @@ function uniqueSpam() {
 
 function countdown() {
   var modeno = 2;
+  window.modeno = modeno;
   hide();
   setTimeout(function(){
     showOptions('Countdown', 'Spams your chat with a countdown.', ['Number to Countdown from'], 1);
@@ -97,6 +157,7 @@ function countdown() {
 
 function samTalk() {
   var modeno = 3;
+  window.modeno = modeno;
   hide();
   setTimeout(function(){
     showOptions('Klat Mas (Sam Talk)', 'Turns your text backwards.', ['Phrase to Translate'], 1);
@@ -105,6 +166,7 @@ function samTalk() {
 
 function weebTalk() {
   var modeno = 4;
+  window.modeno = modeno;
   hide();
   setTimeout(function(){
     showOptions('Unique Spam', 'Makes your text into weeb talk.', ['Phrase to Translate'], 1);
@@ -113,6 +175,7 @@ function weebTalk() {
 
 function verticalText() {
   var modeno = 5;
+  window.modeno = modeno;
   hide();
   setTimeout(function(){
     showOptions('Vertical Text', 'Turns your text vertically in a chat.', ['Phrase to Translate'], 1);

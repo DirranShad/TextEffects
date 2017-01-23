@@ -1,4 +1,22 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
+/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'),
+       url('../fonts/open-sans-v13-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/open-sans-v13-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* open-sans-600italic - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Open Sans Semibold Italic'), local('OpenSans-SemiboldItalic'),
+       url('../fonts/open-sans-v13-latin-600italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/open-sans-v13-latin-600italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 body, button {
     font-family: "Open Sans", Sans Serif;
     text-align: center;
@@ -8,10 +26,44 @@ body {
     background-color: #fefefe;
 }
 
-h1, h3, h5 {
+h1, h3, h5, #timer {
     color: #242d4d;
     font-weight: 600;
     margin: 0px 0px 15px;
+}
+
+p {
+  margin: 0px;
+  position: absolute;
+  width: 50%;
+  font-size: smaller;
+  font-weight: 600;
+  color: rgba(36, 45, 77, 0.72);
+}
+
+#works:hover {
+  cursor: pointer;
+}
+
+#works {
+  text-align: left;
+  left: 0px;
+}
+
+#version {
+  text-align: right;
+  right: 0px;
+}
+
+#timer {
+    font-size: 50px;
+    font-family: "Open Sans", Sans Serif;
+}
+
+#footer {
+    position: absolute;
+    bottom: 20px;
+    width: 98%;
 }
 
 button {
@@ -24,65 +76,73 @@ button {
     font-family: "Open Sans", Sans Serif;
     font-size: 15px;
     background-color: #fefefe;
-    -webkit-transition-duration: 0.1s; /* Safari */
+    -webkit-transition-duration: 0.1s;
+    /* Safari */
     transition-duration: 0.2s;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+button:focus {
+    outline: none;
 }
 
 button:hover {
-  padding: 16px 16px;
-  margin: 4px;
-  font-weight: 600;
-  cursor: pointer;
-  color: #fefefe;
-  border-radius: 25px;
-  background-color: #3b456a;
+    padding: 16px 16px;
+    margin: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fefefe;
+    border-radius: 25px;
+    background-color: #242d4d;
 }
 
 #message {
-  display: none;
+    display: none;
 }
 
 #subtitle {
-  margin-bottom: 32px;
+    margin-bottom: 32px;
 }
 
-.group 			  {
-  position:relative;
-  margin: 0px auto 32px;
-  width: 300px;
+.group {
+    position: relative;
+    margin: 0px auto 32px;
+    width: 300px;
 }
 
-input 				{
-  font-size: 18px;
-  color: #242d4d;
-  padding: 12px 2px 2px 2px;
-  display:block;
-  width:300px;
-  border:none;
-  border-bottom:2px solid #242d4d;
+input {
+    font-size: 18px;
+    color: #242d4d;
+    padding: 12px 2px 2px 2px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 2px solid #242d4d;
 }
 
-input:focus 		{ outline:none; }
+input:focus {
+    outline: none;
+}
 
 input [type="text"] {
-  font-family: "Open Sans", Sans Serif;
+    font-family: "Open Sans", Sans Serif;
 }
 
-label 				 {
-  color:#3b456a;
-  font-size:18px;
-  font-weight:600;
-  position:absolute;
-  pointer-events:none;
-  left: 2px;
-  top: 8px;
-  transition:0.2s ease all;
-  -moz-transition:0.2s ease all;
-  -webkit-transition:0.2s ease all;
+label {
+    color: #3b456a;
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    pointer-events: none;
+    left: 2px;
+    top: 8px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
 }
 
-input:focus ~ label, input:valid ~ label 		{
-  top:-14px;
-  font-size:14px;
-  color: #242d4d;
+input:focus~label, input:valid~label {
+    top: -14px;
+    font-size: 14px;
+    color: #242d4d;
 }
