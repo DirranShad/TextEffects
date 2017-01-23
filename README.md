@@ -23,7 +23,4 @@ To run the program:
 ```bash
 npm start
 ```
-  <br>
-  
-  
-######This thing is kinda dodgy, twspam is not accountable for any loss that may occur from using this program.
+ 
