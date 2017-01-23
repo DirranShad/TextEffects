@@ -14,9 +14,15 @@ Once you've chosen a mode, select a textfield, and it will start its magic.
 
 ###Run the program
 
-Install Electron (Needed)
+Install Electron, Jquery and Python-Shell (Needed)
 ```bash
 npm install electron
+```
+```bash
+npm install jquery
+```
+```bash
+npm install python-shell
 ```
 
 To run the program:
