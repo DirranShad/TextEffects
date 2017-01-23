@@ -1,21 +1,22 @@
-/* open-sans-regular - latin */
+
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
   src: local('Open Sans'), local('OpenSans'),
-       url('../fonts/open-sans-v13-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/open-sans-v13-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('fonts/open-sans-v13-latin-regular.woff2') format('woff2'),
+       url('fonts/open-sans-v13-latin-regular.woff') format('woff');
 }
-/* open-sans-600italic - latin */
+
 @font-face {
   font-family: 'Open Sans';
-  font-style: italic;
+  font-style: normal;
   font-weight: 600;
-  src: local('Open Sans Semibold Italic'), local('OpenSans-SemiboldItalic'),
-       url('../fonts/open-sans-v13-latin-600italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/open-sans-v13-latin-600italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'),
+       url('fonts/open-sans-v13-latin-600.woff2') format('woff2'),
+       url('fonts/open-sans-v13-latin-600.woff') format('woff');
 }
+
 
 body, button {
     font-family: "Open Sans", Sans Serif;
@@ -26,7 +27,7 @@ body {
     background-color: #fefefe;
 }
 
-h1, h3, h5, #timer {
+h1, h3, h4, h5, #timer {
     color: #242d4d;
     font-weight: 600;
     margin: 0px 0px 15px;
@@ -41,11 +42,15 @@ p {
   color: rgba(36, 45, 77, 0.72);
 }
 
-#works:hover {
+#works {
+  display: none;
+}
+
+#worksbtn:hover {
   cursor: pointer;
 }
 
-#works {
+#worksbtn {
   text-align: left;
   left: 0px;
 }

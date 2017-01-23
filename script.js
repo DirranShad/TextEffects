@@ -4,25 +4,32 @@ var script = 'twspam.py';
 var cancelpython = 0
 window.cancelpython = cancelpython;
 
-$('#works').click(function() {
-  console.log('Something');
-  $('#main').slideUp();
-});
+function works() {
+  $('#main').slideToggle(800);
+  $('#works').slideToggle(800);
+}
 
 function hide() {
   $('button').prop("disabled",true);
   $('#main').fadeOut(300);
+  $('#worksbtn').fadeOut(300);
 }
 
 function showOptions(title, desc, action, inputno) {
   $('#message').append('<h1 id="selectTitle">' + title + '</h1>');
   $('#selectTitle').after('<h3 id="subtitle">' + desc + '</h3>');
-  $('#subtitle').after('<div id="inputs"></div>')
+  $('#subtitle').after('<div id="inputs"></div>');
   var x;
   for (x = 0; x < inputno; x++) {
     $('#inputs').append('<div class="group">');
     $(".group").eq(x).append('<input type="text" id="input' + x + '" required><label>' + action[x] + '</label></div>');
   } $('#inputs').after('<button id="backBtn" onclick="menu()" style="left:50%;position:absolute;">Back</button>');
+  $("#input1").attr({
+        "type" : "number",
+        "min" : "1",
+        "max" : "50",
+        "step" : "1"
+    });
   $('#inputs').after('<button id="submitBtn" onclick="submit()" style="right:50%;position:absolute;">Submit</button>');
   $('#message').fadeIn(300);
   $('button').prop("disabled",false);
@@ -34,11 +41,11 @@ function menu(){
   window.setTimeout(function() {
     $('#message').empty();
     $('#main').fadeIn(300);
+    $('#worksbtn').fadeIn(300);
   }, 300);
 }
 
 function submit() {
-  $('button').prop("disabled",true);
   cancelpython = 0
   var input0 = $('#input0').val();
   var input1 = $('#input1').val();
@@ -47,10 +54,11 @@ function submit() {
       $('.inputcheck').fadeOut(200)
       $('.inputcheck').fadeIn(200);
     } else {
-      $('#backBtn').after('<h5 class="inputcheck" style="display:none;margin-top:-20px;">Please input something into all textboxes</h5>')
+      $('#backBtn').after('<h5 class="inputcheck" style="display:none;margin-top:-20px;">Please input properly into all textboxes</h5>')
       $('.inputcheck').fadeIn(300)
     }
   } else {
+      $('button').prop("disabled",true);
       $('#message').fadeOut(300);
       window.input0 = input0;
       window.input1 = input1;
@@ -71,9 +79,9 @@ function end() {
     $('#message').empty();
     $('#modeScreen').empty();
     $('#main').fadeIn(500);
+    $('#worksbtn').fadeIn(300);
   }, 500);
 }
-
 
 function modeScreen() {
   $('#modeScreen').append('<h1 id="modeTitle">Typing into selected textfield in:</h1>');
@@ -125,8 +133,6 @@ function python() {
   }
 }
 
-
-
 function spam() {
   var modeno = 0;
   window.modeno = modeno;
@@ -143,7 +149,6 @@ function uniqueSpam() {
   setTimeout(function(){
     showOptions('Unique Spam', 'Spams your chat with one word and number at a time.', ['Your Message', 'No. of Times to Print'], 2);
   }, 300);
-  console.log(modeno);
 }
 
 function countdown() {

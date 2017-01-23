@@ -4,6 +4,7 @@
   "description": "A GUI for TWSpam",
   "main": "index.js",
   "dependencies": {
+    "electron": "^1.4.15",
     "electron-prebuilt": "^1.4.13",
     "jquery": "^3.1.1",
     "python-shell": "^0.4.0"
