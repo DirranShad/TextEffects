@@ -4,8 +4,8 @@
   font-style: normal;
   font-weight: 400;
   src: local('Open Sans'), local('OpenSans'),
-       url('fonts/open-sans-v13-latin-regular.woff2') format('woff2'),
-       url('fonts/open-sans-v13-latin-regular.woff') format('woff');
+       url('assets/fonts/open-sans-v13-latin-regular.woff2') format('woff2'),
+       url('assets/fonts/open-sans-v13-latin-regular.woff') format('woff');
 }
 
 @font-face {
@@ -13,8 +13,8 @@
   font-style: normal;
   font-weight: 600;
   src: local('Open Sans Semibold'), local('OpenSans-Semibold'),
-       url('fonts/open-sans-v13-latin-600.woff2') format('woff2'),
-       url('fonts/open-sans-v13-latin-600.woff') format('woff');
+       url('assets/fonts/open-sans-v13-latin-600.woff2') format('woff2'),
+       url('assets/fonts/open-sans-v13-latin-600.woff') format('woff');
 }
 
 
