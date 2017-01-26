@@ -138,7 +138,7 @@ function spam() {
   window.modeno = modeno;
   hide();
   setTimeout(function(){
-    showOptions('Spam','Spams your chat with one word at a time.', ['Your Message', 'No. of Times to Print'], 2);
+    showOptions('Spam','Outputs a phrase a certain amount of times.', ['Your Message', 'No. of Times to Print'], 2);
   }, 300);
 }
 
@@ -147,7 +147,7 @@ function uniqueSpam() {
   window.modeno = modeno;
   hide();
   setTimeout(function(){
-    showOptions('Unique Spam', 'Spams your chat with one word and number at a time.', ['Your Message', 'No. of Times to Print'], 2);
+    showOptions('Unique Spam', 'Outputs a phrase and ascending number a certain amount of times.', ['Your Message', 'No. of Times to Print'], 2);
   }, 300);
 }
 
@@ -156,7 +156,7 @@ function countdown() {
   window.modeno = modeno;
   hide();
   setTimeout(function(){
-    showOptions('Countdown', 'Spams your chat with a countdown.', ['Number to Countdown from'], 1);
+    showOptions('Countdown', 'Outputs a countdown.', ['Number to Countdown from'], 1);
   }, 300);
 }
 
@@ -165,7 +165,7 @@ function samTalk() {
   window.modeno = modeno;
   hide();
   setTimeout(function(){
-    showOptions('Klat Mas (Sam Talk)', 'Turns your text backwards.', ['Phrase to Translate'], 1);
+    showOptions('Backwards Text', 'Outputs the phrase turned backwards.', ['Phrase to Translate'], 1);
   }, 300);
 }
 
@@ -174,7 +174,7 @@ function weebTalk() {
   window.modeno = modeno;
   hide();
   setTimeout(function(){
-    showOptions('Unique Spam', 'Makes your text into weeb talk.', ['Phrase to Translate'], 1);
+    showOptions('Unique Spam', 'Outputs your text, but modified into weeb talk.', ['Phrase to Translate'], 1);
   }, 300);
 }
 
@@ -183,6 +183,6 @@ function verticalText() {
   window.modeno = modeno;
   hide();
   setTimeout(function(){
-    showOptions('Vertical Text', 'Turns your text vertically in a chat.', ['Phrase to Translate'], 1);
+    showOptions('Vertical Text', 'Outputs text that has been turned vertically.', ['Phrase to Translate'], 1);
   }, 300);
 }
