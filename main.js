@@ -13,7 +13,7 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 550, height: 550, resizable: false, icon: 'twspam.png'})
+  mainWindow = new BrowserWindow({width: 550, height: 550, resizable: false, icon: 'assets/twspam.png'})
   mainWindow.setMenu(null);
   //mainWindow.webContents.openDevTools()
   // and load the index.html of the app.
