@@ -1,24 +1,19 @@
-
 @font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'),
-       url('assets/fonts/open-sans-v13-latin-regular.woff2') format('woff2'),
-       url('assets/fonts/open-sans-v13-latin-regular.woff') format('woff');
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url('assets/fonts/open-sans-v13-latin-regular.woff2') format('woff2'), url('assets/fonts/open-sans-v13-latin-regular.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Open Sans Semibold'), local('OpenSans-Semibold'),
-       url('assets/fonts/open-sans-v13-latin-600.woff2') format('woff2'),
-       url('assets/fonts/open-sans-v13-latin-600.woff') format('woff');
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url('assets/fonts/open-sans-v13-latin-600.woff2') format('woff2'), url('assets/fonts/open-sans-v13-latin-600.woff') format('woff');
 }
 
-
-body, button {
+body,
+button {
     font-family: "Open Sans", Sans Serif;
     text-align: center;
 }
@@ -27,37 +22,41 @@ body {
     background-color: #fefefe;
 }
 
-h1, h3, h4, h5, #timer {
+h1,
+h3,
+h4,
+h5,
+#timer {
     color: #242d4d;
     font-weight: 600;
     margin: 0px 0px 15px;
 }
 
 p {
-  margin: 0px;
-  position: absolute;
-  width: 50%;
-  font-size: smaller;
-  font-weight: 600;
-  color: rgba(36, 45, 77, 0.72);
+    margin: 0px;
+    position: absolute;
+    width: 50%;
+    font-size: smaller;
+    font-weight: 600;
+    color: rgba(36, 45, 77, 0.72);
 }
 
 #works {
-  display: none;
+    display: none;
 }
 
 #worksbtn:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 #worksbtn {
-  text-align: left;
-  left: 0px;
+    text-align: left;
+    left: 0px;
 }
 
 #version {
-  text-align: right;
-  right: 0px;
+    text-align: right;
+    right: 0px;
 }
 
 #timer {
@@ -81,10 +80,7 @@ button {
     font-family: "Open Sans", Sans Serif;
     font-size: 15px;
     background-color: #fefefe;
-    -webkit-transition-duration: 0.1s;
-    /* Safari */
-    transition-duration: 0.2s;
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    transition: 0.15s ease-in-out;
 }
 
 button:focus {
@@ -99,6 +95,7 @@ button:hover {
     color: #fefefe;
     border-radius: 25px;
     background-color: #242d4d;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
 #message {
@@ -146,7 +143,8 @@ label {
     -webkit-transition: 0.2s ease all;
 }
 
-input:focus~label, input:valid~label {
+input:focus~label,
+input:valid~label {
     top: -14px;
     font-size: 14px;
     color: #242d4d;

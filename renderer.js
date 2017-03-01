@@ -22,7 +22,7 @@ function showOptions(title, desc, action, inputno) {
     var x;
     for (x = 0; x < inputno; x++) {
         $('#inputs').append('<div class="group">');
-        $(".group").eq(x).append('<input type="text" id="input' + x + '" required><label>' + action[x] + '</label></div>');
+        $(".group").eq(x).append('<input type="text" min="1" max="40" step="1" id="input' + x + '" required><label>' + action[x] + '</label></div>');
     }
     $('#inputs').after('<button id="backBtn" onclick="menu()" style="left:50%;position:absolute;">Back</button>');
     $("#input1").attr({
@@ -148,7 +148,7 @@ function uniqueSpam() {
     window.modeno = modeno;
     hide();
     setTimeout(function() {
-        showOptions('Unique Spam', 'Outputs a phrase and ascending number a certain amount of times.', ['Your Message', 'No. of Times to Print'], 2);
+        showOptions('Number Spam', 'Outputs a phrase and ascending number a certain amount of times.', ['Your Message', 'No. of Times to Print'], 2);
     }, 300);
 }
 
