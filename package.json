@@ -1,40 +1,40 @@
 {
-  "name": "twspam",
-  "version": "1.0.1",
-  "description": "A GUI for TWSpam",
-  "main": "main.js",
-  "devDependencies": {
-    "electron": "^1.4.15",
-    "electron-prebuilt": "^1.4.13",
-    "jquery": "^3.1.1",
-    "python-shell": "^0.4.0"
-  },
-  "scripts": {
-    "pack:macos": "electron-packager . TWSpam --out=dist/osx --platform=darwin --arch=x64 --icon=assets/twspam1024.icns app-version=1.0.1 --asar",
-    "pack:linux64": "electron-packager . TWSpam --out=dist/linux --platform=linux --arch=x64 app-version=1.0.1 --asar",
-    "pack:win64": "electron-packager . TWSpam --out=dist/win --platform=win32 --arch=x64 app-version=1.0.1 --icon=assets/twspamico.ico --asar",
-    "build": "npm run pack:macos && npm run pack:win64 && npm run pack:linux64",
-    "start": "electron ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dirranshad/twspam.git"
-  },
-  "keywords": [
-    "twspam",
-    "spam",
-    "text",
-    "edit",
-    "gui"
-  ],
-  "author": "DirranShad and Cyber-Shadow",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dirranshad/twspam/issues"
-  },
-  "homepage": "https://github.com/dirranshad/twspam#readme",
-  "dependencies": {
-    "jquery": "^3.1.1",
-    "python-shell": "^0.4.0"
-  }
+    "name": "twspam",
+    "version": "1.0.1",
+    "description": "A GUI for TWSpam",
+    "main": "main.js",
+    "devDependencies": {
+        "electron": "^1.4.15",
+        "electron-prebuilt": "^1.4.13",
+        "jquery": "^3.1.1",
+        "python-shell": "^0.4.0"
+    },
+    "scripts": {
+        "pack:macos": "electron-packager . TWSpam --out=dist/osx --platform=darwin --arch=x64 --icon=assets/twspam1024.icns app-version=1.0.1",
+        "pack:linux64": "electron-packager . TWSpam --out=dist/linux --platform=linux --arch=x64 app-version=1.0.1",
+        "pack:win64": "electron-packager . TWSpam --out=dist/win --platform=win32 --arch=x64 app-version=1.0.1 --icon=assets/twspamico.ico",
+        "build": "npm run pack:win64 && npm run pack:linux64",
+        "start": "electron ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dirranshad/twspam.git"
+    },
+    "keywords": [
+        "twspam",
+        "spam",
+        "text",
+        "edit",
+        "gui"
+    ],
+    "author": "DirranShad and Cyber-Shadow",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/dirranshad/twspam/issues"
+    },
+    "homepage": "https://github.com/dirranshad/twspam#readme",
+    "dependencies": {
+        "jquery": "^3.1.1",
+        "python-shell": "^0.4.0"
+    }
 }
