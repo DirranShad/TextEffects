@@ -1,6 +1,6 @@
 var modeno;
 const PythonShell = require('python-shell');
-var script = 'twspam.py';
+var script = 'resources/app/twspam.py';
 cancelpython = 0
 
 function works() {
@@ -49,7 +49,7 @@ function submit() {
     cancelpython = 0
     input0 = $('#input0').val();
     input1 = $('#input1').val();
-    if (input0 == "" || input1 == "") {
+    if (input0 == "" || input1 == "" || input1 == "." || input1 == "e") {
         if ($('.inputcheck').length >= 1) {
             $('.inputcheck').fadeOut(200)
             $('.inputcheck').fadeIn(200);
