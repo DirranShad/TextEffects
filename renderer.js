@@ -23,6 +23,7 @@ function showOptions(title, desc, action, inputno) {
         $('#inputs').append('<div class="group">');
         $(".group").eq(x).append('<input type="text" id="input' + x + '" required><label>' + action[x] + '</label></div>');
     }
+    if (title === 'Countdown') { $('#input0').attr("id", "input1"); }
     $('#inputs').after('<button id="backBtn" onclick="menu()" style="left:50%;position:absolute;">Back</button>');
     $("#input1").attr({
         "type": "number",
@@ -54,7 +55,7 @@ function submit() {
             $('.inputcheck').fadeOut(200)
             $('.inputcheck').fadeIn(200);
         } else {
-            $('#backBtn').after('<h5 class="inputcheck" style="display:none;margin-top:-20px;">Please input properly into all textboxes</h5>')
+            $('#backBtn').after('<h5 class="inputcheck" style="display:none;margin-top:-20px;">Please input properly into all text-fields.</h5>')
             $('.inputcheck').fadeIn(300)
         }
     } else {

@@ -1,6 +1,6 @@
 {
     "name": "twspam",
-    "version": "1.0.1",
+    "version": "v1.0.0",
     "description": "A GUI for TWSpam",
     "main": "main.js",
     "devDependencies": {
