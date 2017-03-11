@@ -28,3 +28,4 @@ To run the program:
 npm start
 ```
  
+###### Got an idea? Create an issue to discuss it!
