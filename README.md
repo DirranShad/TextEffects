@@ -1,6 +1,6 @@
 # TWSpam - Pimp Your Text
 
-###A fork for a gui for TWSpam
+### A fork for a gui for TWSpam
 TWSpam is a bad name. Spamming is not the only thing this program does.<br><br>
 **It Features:**
   1. Spam 
@@ -12,9 +12,13 @@ TWSpam is a bad name. Spamming is not the only thing this program does.<br><br>
   
 Once you've chosen a mode, select a textfield, and it will start its magic.
 
-###Run the program
+### How do I get the program?
 
-Install Electron, Jquery and Python-Shell (Required - Packaged App Coming Soon.)
+Go to the "Releases" tab and find the latest version to download for your platform.
+
+### Run the Program - During Development
+
+Install Electron, Jquery and Python-Shell
 ```bash
 npm install
 ```
