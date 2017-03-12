@@ -1,7 +1,8 @@
-# TWSpam - Pimp Your Text
+# TextEffects
 
-### A fork for a gui for TWSpam
-TWSpam is a bad name. Spamming is not the only thing this program does.<br><br>
+### A gui for TWSpam
+Pimp the text you input, and watch it automagically output the text to any textfield on your computer!.<br>
+
 **It Features:**
   1. Spam 
   2. Number Spam 
@@ -10,7 +11,7 @@ TWSpam is a bad name. Spamming is not the only thing this program does.<br><br>
   5. Weeb Text
   6. Vertical Text
   
-Once you've chosen a mode, select a textfield, and it will start its magic.
+Once you've chosen a mode, input what you want to be changed, select a textfield, and it will start its magic.
 
 ### How do I get the program?
 
