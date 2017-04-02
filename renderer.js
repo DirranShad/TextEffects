@@ -48,8 +48,9 @@ function menu() {
 
 function submit() {
     cancelpython = 0
-    input0 = $('#input0').val();
-    input1 = $('#input1').val();
+    input0 = String($('#input0').val());
+    input1 = String($('#input1').val());
+    alert(input0)
     if (input0 == "" || input1 == "" || input1 == "." || input1 == "e") {
         if ($('.inputcheck').length >= 1) {
             $('.inputcheck').fadeOut(200)
